@@ -2,6 +2,7 @@
 
 #GET REPOSITORY FILES
 sudo cp -a /home/cam/yolocam/. /home/cam/
+sudo cd ~
 
 #UPDATE Ubuntu
 sudo apt install net-tools -y
