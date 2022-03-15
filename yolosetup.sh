@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#GET REPOSITORY FILES
+sudo cp -a /home/cam/yolocam/. /home/cam/
+
 #UPDATE Ubuntu
 sudo apt install net-tools -y
 sudo apt update
@@ -84,4 +87,5 @@ echo "$TXT" >/etc/netplan/00-installer-config.yaml
 sudo netplan apply
 echo "Reconnect ssh terminal to 192.168.0.151"
 echo "and run ./sdk.sh using the [up] option"
+sudo rm -r -f /home/cam/yolocam/
 
