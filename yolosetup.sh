@@ -33,14 +33,11 @@ sudo apt install v4l-utils
 sudo groupadd docker
 sudo usermod -aG docker $$USER
 
-#CLONE FIRMWARE:
-sudo git clone https://github.com/sqhy2022/yolocam.git .
-
 #TYPE SDK LICENSE KEY
 # shellcheck disable=SC2162
 # shellcheck disable=SC2034
-read -e -p "Enter SDK token: " -i "f9870edb707a9cd1f90075506de5b2abc3cb73e3" TOKEN
-read -r -p "Enter SDK License key: " LIC
+read -e -p "Enter SDK TOKEN: " TOKEN
+read -r -p "Enter SDK LICENSE key: " LIC
 TXT="python3 sdk.py -t ${TOKEN} -l ${LIC}"
 sudo rm sdk.dh
 echo "$TXT" >sdk.sh
